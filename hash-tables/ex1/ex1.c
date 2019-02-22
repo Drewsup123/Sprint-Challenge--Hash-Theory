@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "hashtable.h"
 #include "ex1.h"
+// I had to just copy and paste the Hash table function in here
 
 Answer *get_indices_of_item_weights(int *weights, int length, int limit)
 {
