@@ -29,6 +29,7 @@ Answer *get_indices_of_item_weights(int *weights, int length, int limit)
     }
   }
   return NULL;
+  // Runs in O(n) / Linear time
 }
 
 void print_answer(Answer *answer)
