@@ -1,29 +1,29 @@
 (A ∧ ¬B) (alternate: (A && !B))
 A     B     result
 -------------------
-0     0       ?
-0     1       ?
-1     0       ?
-1     1       ?
+0     0       0
+0     1       0
+1     0       1
+1     1       0
 (¬A ∨ B) ∧ ¬(A ∧ ¬B) (alternate: (!A || B) && !(A && !B))
 A     B     result
 -------------------
-0     0       ?
-0     1       ?
-1     0       ?
-1     1       ?
+0     0       1
+0     1       1
+1     0       0
+1     1       1
 ¬(A ∧ B) ∨ ( (A ∧ C) ∧ ¬(B ∨ ¬C) ) (alternate: !(A && B) || ( (A && C) && !(B || !C) ))
 (Hint: Is it possible to calculate this using code?)
 A     B     C     result
 -------------------------
-0     0     0       ?
-0     0     1       ?
-0     1     0       ?
-0     1     1       ?
-1     0     0       ?
-1     0     1       ?
-1     1     0       ?
-1     1     1       ?
+0     0     0       1
+0     0     1       1
+0     1     0       1
+0     1     1       1
+1     0     0       1
+1     0     1       1
+1     1     0       0
+1     1     1       0
 STRETCH GOAL
 The sum of two binary digits can be represented with the following truth table:
 
