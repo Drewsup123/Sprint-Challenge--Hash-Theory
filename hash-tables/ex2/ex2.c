@@ -22,7 +22,7 @@ char **reconstruct_trip(Ticket **tickets, int length)
   // insert the tickets into the hash table with origin as key and destination as value
   // Get the starting place by finding the one with source "none"
   // iteratively go through the table and find the next destination key 
-    //keep doing this until one has the key of none
+    //keep doing this until one has the key of none or just do a for loop with length
   // add these to the route
 
   return route;

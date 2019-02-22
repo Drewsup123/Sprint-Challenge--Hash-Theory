@@ -26,7 +26,6 @@ During your challenge, you will be pulled aside by a PM for a 5 minute interview
 
   * 1. What is a computer and how does it work?
   * 2. What is an array and how does it work?
-  a specified range of memory
   * 3. What is a hash table and how does it work?
 
 You will receive points at the PM's discretion based on the following criteria:

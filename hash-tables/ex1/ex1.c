@@ -7,17 +7,25 @@
 Answer *get_indices_of_item_weights(int *weights, int length, int limit)
 {
   HashTable *ht = create_hash_table(16);
+//   * A brute-force solution would involve two nested loops, yielding a quadratic-runtime solution. 
+//   * Can we use a hash table in order to implement a solution with a better runtime?
+// * Think about what we can store in the hash table in order to help us to solve this problem more efficiently. 
+// * What if we store each weight in the input list as keys? What would be a useful thing to store as the value 
+// for each key? 
+// * If we store each weight's list index as its value, we can then check to see if the hash table 
+// contains an entry for `limit - weight`. If it does, then we've found the two items whose weights 
+// sum up to the `limit`!
   
   // YOUR CODE HERE
   Answer *answer = malloc(sizeof(Answer));
   for (int i = 0; i < length; i++) {
     int value = hash_table_retrieve(ht, weights[i]);
-    if(value != -1) {
+    if(value != -1) {// checks to see if key exists because retrieve gives value of -1 if it does not
       answer->index_1 = i;
       answer->index_2 = value;
       return answer;
     }else {
-    hash_table_insert(ht, limit-weights[i], i);
+      hash_table_insert(ht, limit-weights[i], i);
     }
   }
   return NULL;
